@@ -51,7 +51,7 @@ const Navbar = () => {
           <Link to="/cart" className="text-gray-300 hover:text-white">Cart <sup>{ctx.cartArr.length}</sup> </Link>
           <Link to="/services" className="text-gray-300 hover:text-white">Services</Link>
           <Link to="/about" className="text-gray-300 hover:text-white">About</Link>
-
+          
           <div className="relative flex gap-10">
             <button
               onClick={toggleDropdown}
@@ -85,11 +85,11 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Navigation */}
       <div className={`md:hidden ${isDropdownOpen ? "block" : "hidden"} mt-2`}>
-        <a href="/" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</a>
-        <a href="/about" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">About</a>
-        <a href="/signup" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Sign Up</a>
-        <a href="/login" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Login</a>
-        <a href="/cart" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Cart</a>
+        <Link to="/" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</Link>
+        <Link to="/about" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">About</Link>
+        <Link to="/signup" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Sign Up</Link>
+        <Link to="/login" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Login</Link>
+        <Link to="/cart" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Cart</Link>
       
       </div>
     </nav>
