@@ -86,10 +86,12 @@ const Navbar = () => {
       {/* Mobile Dropdown Navigation */}
       <div className={`md:hidden ${isDropdownOpen ? "block" : "hidden"} mt-2`}>
         <Link to="/" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Home</Link>
-        <Link to="/about" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">About</Link>
-        <Link to="/signup" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Sign Up</Link>
-        <Link to="/login" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Login</Link>
         <Link to="/cart" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Cart</Link>
+        <Link to="/about" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">About</Link>
+       {login===false && <Link to="/signup" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Sign Up</Link>}
+       {login===false && <Link to="/login" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Login</Link>}
+        
+        {login===true&&<Link to="" onClick={()=>ctxUser.logout()} className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Logout</Link>}
       
       </div>
     </nav>
