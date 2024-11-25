@@ -3,6 +3,7 @@ import CartContext from './CartContext'
 import { ToastContainer , toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CartState = (props) => {
   const [cartArr, setcartArr] = useState([]);
@@ -17,6 +18,22 @@ const CartState = (props) => {
     else{
     toast.success('Item is added successfully')
   setcartArr([...cartArr ,obj])
+}
+    }
+    let navigate = useNavigate()
+ function buyItem (obj){
+      console.log(obj)
+      obj.quantity = 1
+    let findObj = cartArr.find((ele)=>ele.id===obj.id)
+    if(findObj){
+      toast.error('Item is already exist in cart')
+    }
+    else{
+    toast.success('Item is added successfully')
+  setcartArr([...cartArr ,obj])
+  navigate('/cart')
+  
+
 }
     }
     function updateItem (obj,ind) {
@@ -67,7 +84,7 @@ const CartState = (props) => {
 
  
   return (
-    <CartContext.Provider value={{addCartitem ,cartArr , setcartArr , updateItem ,removeItem , deleteItem , searchValue , setSearchValue}}>
+    <CartContext.Provider value={{addCartitem ,cartArr , setcartArr , updateItem ,removeItem , deleteItem , searchValue , setSearchValue ,buyItem}}>
       {props.children}
     </CartContext.Provider>
   )

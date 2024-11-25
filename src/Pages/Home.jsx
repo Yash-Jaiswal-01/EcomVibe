@@ -191,7 +191,7 @@ const Home = () => {
               </CardContent>
               <CardActions>
 
-                <Button className='gap-1  hover:text-white hover:bg-blue-600'onClick= {()=>ctx.addCartitem(element)} size="small">Buy Now <MdElectricBolt /></Button>
+                <Button className='gap-1  hover:text-white hover:bg-blue-600'onClick= {()=>ctx.buyItem(element)} size="small">Buy Now <MdElectricBolt /></Button>
 
                 <Button className='gap-2 hover:text-white hover:bg-blue-600' onClick= {()=>ctx.addCartitem(element)} size="small">Add to Cart  <BsCart4 /></Button>
               </CardActions>
