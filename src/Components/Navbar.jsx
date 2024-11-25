@@ -34,23 +34,23 @@ const Navbar = () => {
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
 </svg>Ecom Vibe </div>
         {/* Search Bar */}
-        <div className="relative flex ">
+       {login === true && <div className="relative flex ">
           <input onChange={handleSearchChange}
             type="text"
             placeholder="Search..."
-            className="bg-slate-50 text-black rounded-full  w-24 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-slate-50 text-black rounded-full  w-24 sm:w-28 md:w-36 lg:w-48 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
           
           />
          
 
-        </div>
+        </div>}
 
          {/* Desktop Navigation */}
          <div className="hidden md:flex space-x-4">
-          <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
-          <Link to="/cart" className="text-gray-300 hover:text-white">Cart <sup>{ctx.cartArr.length}</sup> </Link>
-          <Link to="/services" className="text-gray-300 hover:text-white">Services</Link>
-          <Link to="/about" className="text-gray-300 hover:text-white">About</Link>
+          {login === true && <Link to="/" className="text-gray-300 hover:text-white">Home</Link>}
+          {login === true &&  <Link to="/cart" className="text-gray-300 hover:text-white">Cart <sup>{ctx.cartArr.length}</sup> </Link>}
+          {login === true && <Link to="/services" className="text-gray-300 hover:text-white">Services</Link>}
+         {login === true && <Link to="/about" className="text-gray-300 hover:text-white">About</Link>}
           
           <div className="relative flex gap-10">
             <button
