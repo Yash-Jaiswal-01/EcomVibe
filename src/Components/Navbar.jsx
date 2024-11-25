@@ -34,11 +34,11 @@ const Navbar = () => {
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
 </svg>Ecom Vibe </div>
         {/* Search Bar */}
-        <div className="relative flex">
+        <div className="relative flex ">
           <input onChange={handleSearchChange}
             type="text"
             placeholder="Search..."
-            className="bg-slate-50 text-black rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-slate-50 text-black rounded-full  w-24 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
           
           />
          
@@ -89,6 +89,8 @@ const Navbar = () => {
         <a href="/about" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">About</a>
         <a href="/signup" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Sign Up</a>
         <a href="/login" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Login</a>
+        <a href="/cart" className="block px-4 py-2 text-gray-300 hover:bg-gray-700">Cart</a>
+      
       </div>
     </nav>
   );
